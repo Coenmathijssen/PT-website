@@ -1,0 +1,93 @@
+.messages {
+  .header-nav {
+    background-color: $pink;
+  }
+
+  .container {
+    margin: 0 32px;
+    width: calc(100% - 64px);
+
+
+    h1.body-l {
+      background-color: $white;
+      display: inline-block;
+      padding: 10px 40px 10px 115px;
+      margin: 40px 0;
+      border-radius: 36px;
+      box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5);
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: 65px;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='28px' height='27px' viewBox='0 0 28 27' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3EBubbles - simple-line-icons%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Homescreen---Discover' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' font-family='simple-line-icons' font-size='28' font-weight='normal'%3E%3Cg id='Matches---Berichten' transform='translate(-45.000000, -96.000000)' fill='%23147A9A'%3E%3Ctext id='Bubbles---simple-line-icons'%3E%3Ctspan x='45' y='122'%3E%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-size: 50px 56px;
+        height: 56px;
+        width: 50px;
+        margin-bottom: -2px;
+      }
+    }
+
+    main {
+      article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        margin: 20px 0;
+
+        > img {
+          grid-column: 1 / span 1;
+          justify-self: center;
+          max-width: 160px;
+          height: auto;
+        }
+
+        div {
+          grid-column: 2 / span 2;
+          justify-self: center;
+        }
+
+        a {
+          grid-column: 4 / span 1;
+          justify-self: center;
+          background-color: $light-blue;
+          border-radius: 100%;
+          padding: 30px;
+          margin: 30px;
+          display: flex;
+          align-items: center;
+          box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5);
+          transition: all .3s;
+
+          &:hover, &:active {
+            background-color: $blue;
+            box-shadow: none;
+          }
+
+          img {
+            max-width: 40px;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $orange;
+            top: 10px;
+            left: 165px;
+          }
+        }
+      }
+    }
+  }
+}
